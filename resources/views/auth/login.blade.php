@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <title>Business Book</title>
-    @livewireStyles
+
 </head>
 <div class="container" style="margin-top: 100px">
     <div class="row justify-content-center">

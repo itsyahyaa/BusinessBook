@@ -2,7 +2,7 @@
     <!-- Sidebar -->
     <div class="bg-white" id="sidebar-wrapper">
         <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
-                class="fas fa-user-secret me-2"></i>Laundry</div>
+                class="fas fa-user-secret me-2"></i>BuizBook</div>
         <div class="list-group list-group-flush my-3">
             <a href="/" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                     class="fas fa-home me-2"></i>Home</a>
@@ -23,11 +23,16 @@
             <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                     class="fas fa-chart-area me-2"></i>Suppliers</a>
 
-            <a href="/inventory" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                    class="fas fa-laptop me-2"></i>Cashier</a>
-            <a href="{{ route('logout.index') }}"
-                class="list-group-item list-group-item-action bg-transparent fw-bold" style="color: red"><i
-                    class="fas fa-laptop me-2"></i>Logout</a>
+            <a href="{{ route('users.index') }}"
+                class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-laptop me-2"></i>Users</a>
+            <a href="{{ route('logout') }}" onclick=" event.preventDefault();
+                document.getElementById('logout-form').submit();"
+                class="list-group-item list-group-item-action bg-transparent fw-bold" style="color: red">
+                <i class="fas fa-laptop me-2"></i>Logout</a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
         </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -62,7 +67,7 @@ integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 </script>
-@livewireScripts
+
 <script>
     var el = document.getElementById("wrapper");
     var toggleButton = document.getElementById("menu-toggle");

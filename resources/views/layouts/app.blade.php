@@ -19,7 +19,7 @@
     </div>
 
 
-
+    @livewireScripts
 </body>
 
 
