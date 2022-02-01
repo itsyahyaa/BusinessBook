@@ -6,8 +6,9 @@
         <div class="list-group list-group-flush my-3">
             <a href="/" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                     class="fas fa-home me-2"></i>Home</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                    class="fas fa-truck me-2"></i>Sections</a>
+            <a href="{{ route('category.index') }}"
+                class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-truck me-2"></i>Category</a>
 
             <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                     class="fas fa-box me-2"></i>Orders</a>
